@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavinsurya</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+
+        .active {
+            background-color: rgb(65, 100, 255);
+        }
+
+        #myCanvas {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul>
+            <li><a style="color: white;">Hi,Welcome</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li style="float:right"><a class="active">Kavinsurya</a></li>
+            <li style="float:right"><a href="login.html">Logout</a></li>
+        </ul>
+    </div>
+    <div>
+        <canvas id="myCanvas" width="1000" height="150" style="border:1px solid #d3d3d3;margin-top: 10%;"></canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.font = "100px Sans-serif ";
+            ctx.strokeText("Kavinsurya", 200, 100);
+        </script>
+    </div>
+    
+    </div>
+</body>
+
+</html>
