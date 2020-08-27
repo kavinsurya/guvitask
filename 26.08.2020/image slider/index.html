@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Image slider</h1>
+        <img src="1.jpg" id="first">
+    </div>
+</body>
+<script>
+    var images =[
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg",
+    ];
+    var a = 0;
+    function slide(){
+        document.getElementById("first").src = images[a];
+        if(a<(images.length-1))
+        a++;
+        else
+        a = 0;
+    }
+    setInterval(slide,2000);
+</script>
+</html>

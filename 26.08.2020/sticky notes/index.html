@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+
+        margin: 30px;
+    }
+
+    #create,
+    textarea {
+        float: left;
+        padding: 25px 25px 40px;
+        margin: 0 20px 20px 0;
+        width: 250px;
+        height: 250px;
+    }
+
+    #create {
+        user-select: none;
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        border: 15px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.1);
+        font: 220px "Helvetica", sans-serif;
+        line-height: 185px;
+    }
+
+    #create:hover {
+        border-color: rgba(0, 0, 0, 0.2);
+        color: rgba(0, 0, 0, 0.2);
+    }
+
+    textarea {
+        font: 20px 'Gloria Hallelujah', cursive;
+        line-height: 1.5;
+        border: 0;
+        border-radius: 3px;
+        background: linear-gradient(#F9EFAF, #F7E98D);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: box-shadow 0.5s ease;
+        max-width: 520px;
+        max-height: 250px;
+    }
+
+    textarea:hover {
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    textarea:focus {
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+        outline: none;
+    }
+</style>
+
+<body>
+    <div id='textareacontainer'>
+
+        <textarea id="textarea1">sticky note</textarea>
+        <div id="create" onclick="create()">+</div>
+
+    </div>
+
+
+</body>
+<script>
+    function create() {
+
+        var tag = document.createElement("textarea");
+        var element = document.getElementById("textareacontainer");
+        element.insertBefore(tag, element.lastElementChild);
+
+    };
+</script>
+
+</html>
